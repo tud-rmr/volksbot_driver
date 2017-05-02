@@ -11,16 +11,19 @@
 				-"*.config.yaml" configfile for your joystick
 
 2. 	Configfile and Launchfile Setup
-	
-	Easiest way is to put the configfile and launchfile into the "*/launch" folder inside the "/volksbot_driver" folder. There should already be a file called "volkbot.launch". 
 
 	Open the "joy_volksbot.launch" file and change the default value of "joy_config" to the name of your given joystick. That would be "logitech" if you would be using a logitech joystick and your config file is called "logitech.config.yaml". 
 
+	Open a terminal and run:
+
+	roslaunch volskbot_driver joy_volksbot.launch
+	
+	
 	Another way would be to later run the lauchfile with "joy_config" as an argument.
 
 3.	Connection
 
-	Connection between laptop and VB is via USB. The USB port of VB is on the side of one of the motorcontrollers. Motorcontrollers are the two black boxes inside VB, one of thoses works as a master, thats the one with the USBport. Also connect your joystick to the laptop of course;)
+	Connection between laptop and VB is via USB. The USB port of VB is on the side of one of the Maxxon Motor Drivers. The Motor Drivers are the two black boxes inside VB, one of thoses works as a master, thats the one with the USBport. Also connect your joystick to the laptop of course;)
 
 4.  Starting-up
 	
@@ -45,7 +48,3 @@
 	-note the numbers of the buttons and sticks, first button/stick is index 0
 	-change or create configfile with these numbers
 	-you can check your mappings with running "joy_node" and "teleop_node" (pkg=teleop_twist_joy) and then "rostopic echo /cmd_vel", make sure though, that you have loaded the configfile to the parameter server
-
-
-#Sebastian Heinzel 
-#email: sebba.heinzel@gmail.com
