@@ -21,7 +21,7 @@
 
   <arg name="joy_config" default="logitech" />
   <arg name="joy_dev" default="/dev/input/js0" />
-  <arg name="config_filepath" default="$(find sensorplatform)/joystick_settings/logitech.config.yaml" />
+  <arg name="config_filepath" default="$(find volksbot_driver)/data/joy_settings/logitech.config.yaml" />
   
   <node pkg="joy" type="joy_node" name="joy_node">
     <param name="dev" value="$(arg joy_dev)" />
